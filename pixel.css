@@ -1,0 +1,29 @@
+/* .container {
+    border: 5px solid black;
+} */
+
+.pad {
+    border: 5px solid black;
+}
+
+.box {
+    border: 1px solid lightgray;
+}
+
+.row-div {
+    display: inline-block;
+}
+
+
+.color-div {
+    margin-top: 1em;
+    display: inline-block;
+}
+
+.color {
+    width: 48px;
+    height: 48px;
+    margin: 0 5px 0 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
