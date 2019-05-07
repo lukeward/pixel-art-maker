@@ -48,24 +48,34 @@ for (let col=0; col<colCount; col+=1) {
 }
 
 
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown', 'gray', 'black', 'white']
 
+const colors = ['red', 'orange', 'yellow', 
+                'green', 'blue', 'purple', 
+                'brown', 'gray', 'black', 'white']
+
+
+// Add color buttons.
 for (let col=0; col<colors.length; col+=1) {
     const box = document.createElement('div')
     box.className = 'color'
     box.id = colors[col]
     box.style.backgroundColor = colors[col]
+    
+    // Dynamically size the color boxes based on the defined constants.
     box.style.width = colorBoxSize - 2 * colorBorderSize
     box.style.height = colorBoxSize - 2 * colorBorderSize
 
     box.addEventListener('click', (evt)=>{
+        // Reset the border of the previously selected color.
         previousBox = document.querySelector(`#${currentColor}`)
         previousBox.style.border = '1px solid black'
 
+        // Embiggen the border of the newly selected color.
         currentColor = evt.srcElement.style.backgroundColor
         box.style.border = '3px solid black'
     })
 
+    // Surrounding each button with a div. Allows for laying out the buttons horizontally.
     const colorDiv = getDiv('color-div')
     colorDiv.appendChild(box)
 
