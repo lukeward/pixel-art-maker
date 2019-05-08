@@ -54,6 +54,9 @@ const colors = ['red', 'orange', 'yellow',
                 'brown', 'gray', 'black', 'white']
 
 
+// Surrounding each button with a div. Allows for laying out the buttons horizontally.
+const colorDiv = getDiv('color-div')
+
 // Add color buttons.
 for (let col=0; col<colors.length; col+=1) {
     const box = document.createElement('div')
@@ -75,10 +78,8 @@ for (let col=0; col<colors.length; col+=1) {
         box.style.border = '3px solid black'
     })
 
-    // Surrounding each button with a div. Allows for laying out the buttons horizontally.
-    const colorDiv = getDiv('color-div')
     colorDiv.appendChild(box)
-
-    containerTag.appendChild(colorDiv)
 }
+
+containerTag.appendChild(colorDiv)
 
